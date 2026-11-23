@@ -1,0 +1,41 @@
+=== BASIC PROFILE ===
+Rows: 5,001 | customers: 987 | columns: 24
+Fraud: 55 (1.10%) | legit: 4946
+Distinct transaction dates: 1 (2025-06-15)
+Transactions per customer: min=1, median=5, max=14
+Missing values per column: {'Gender': 75, 'Age': 75, 'Account_Balance': 75, 'Credit_Score': 75, 'Loan_Amount': 75, 'Pay_On_Time': 75}
+Loan_Amount cells holding text instead of a number: 10
+Rows with at least one missing value: 434
+Transaction_Location state != customer State: 90.7% of rows
+
+=== SINGLE-FEATURE ROC-AUC (direction-agnostic, 0.5 = no signal) ===
+  Risk_Score                   1.000
+  Account_Age_Years            0.573
+  Avg_Monthly_Transaction      0.554
+  Recent_Transaction_Amount    0.545
+  Age                          0.514
+  Credit_Score                 0.515
+  Account_Balance              0.559
+  Loan_Amount                  0.527
+  Hour                         0.510
+
+=== RISK_SCORE BY CLASS ===
+                 min  median    max
+Is_Fraudulent                      
+0              0.000   0.291  0.750
+1              0.751   0.794  0.998
+max Risk_Score among legit = 0.750; min among fraud = 0.751
+Rule 'Risk_Score > 0.75' reproduces Is_Fraudulent for 100.00% of all rows
+
+=== LEAKAGE ABLATION: Random Forest with vs without Risk_Score ===
+  With Risk_Score      ROC-AUC 1.000 +/- 0.000 | PR-AUC 0.998 +/- 0.006
+  Without Risk_Score   ROC-AUC 0.497 +/- 0.075 | PR-AUC 0.019 +/- 0.014
+  (cleaned data: 4628 rows, 53 frauds, prevalence 1.145%; 5-fold x 3 repeats stratified CV)
+
+=== FRAUD RATE BY CATEGORY (Wilson 95% intervals) ===
+  Transaction_Type: Deposit=1.61% (n=994), Payment=0.79% (n=1013), Purchase=1.01% (n=987), Transfer=0.69% (n=1013), Withdrawal=1.41% (n=994)
+  Device_Type: ATM=1.03% (n=1643), Mobile=1.23% (n=1707), Web=1.03% (n=1651)
+  Account_Type: Checking=1.02% (n=1176), Credit=1.44% (n=1248), Investment=1.13% (n=1323), Savings=0.80% (n=1254)
+  Hour_Block: 00-05=1.13% (n=1235), 06-11=1.16% (n=1288), 12-17=0.91% (n=1208), 18-23=1.18% (n=1270)
+
+Done. Figures written to /home/claude/bf_repo/assets/figures

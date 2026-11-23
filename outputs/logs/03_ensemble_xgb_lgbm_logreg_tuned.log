@@ -1,0 +1,125 @@
+[LightGBM] [Info] Number of positive: 3956, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000345 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4409
+[LightGBM] [Info] Number of data points in the train set: 7913, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=-0.000000
+[LightGBM] [Info] Start training from score -0.000000
+[LightGBM] [Info] Number of positive: 3956, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000417 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 4409
+[LightGBM] [Info] Number of data points in the train set: 7913, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=-0.000000
+[LightGBM] [Info] Start training from score -0.000000
+[LightGBM] [Info] Number of positive: 44, number of negative: 3956
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000366 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 2401
+[LightGBM] [Info] Number of data points in the train set: 4000, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=-0.000000
+[LightGBM] [Info] Start training from score -0.000000
+[LightGBM] [Info] Number of positive: 44, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000316 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 2396
+[LightGBM] [Info] Number of data points in the train set: 4001, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Info] Number of positive: 44, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000284 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 2399
+[LightGBM] [Info] Number of data points in the train set: 4001, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Info] Number of positive: 44, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000285 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 2401
+[LightGBM] [Info] Number of data points in the train set: 4001, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+[LightGBM] [Info] Number of positive: 44, number of negative: 3957
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000253 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 2397
+[LightGBM] [Info] Number of data points in the train set: 4001, number of used features: 20
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.500000 -> initscore=0.000000
+[LightGBM] [Info] Start training from score 0.000000
+Cross-Validation Recall-Macro Scores: [0.48939394 0.4934277  0.48837209 0.57877562 0.48988878]
+Mean CV Recall-Macro: 0.5079716272941753 ± 0.03544289260044406
+
+XGBoost Feature Importance:
+                       Feature  Importance
+17         High_Velocity_Flag    0.132424
+15            Trans_Frequency    0.089613
+9                 Device_Type    0.077314
+3                Credit_Score    0.076147
+21          Trans_Amount_Rank    0.073754
+4                 Loan_Amount    0.061264
+10          Account_Age_Years    0.059477
+1                      Gender    0.053423
+11                       Hour    0.052772
+14     Trans_Amount_Deviation    0.051164
+0                         Age    0.045139
+2             Account_Balance    0.044666
+7   Recent_Transaction_Amount    0.043098
+16      Time_Since_Last_Trans    0.037144
+6                 Pay_On_Time    0.031925
+13     Trans_to_Balance_Ratio    0.029466
+8     Avg_Monthly_Transaction    0.022258
+18  Device_Inconsistency_Flag    0.016524
+19     Location_Inconsistency    0.002428
+5            Transaction_Type    0.000000
+12                    Weekday    0.000000
+20        Unusual_Amount_Flag    0.000000
+Background dataset has 5001 samples but max_samples=100. Subsampling to 100 samples for SHAP value computation. To use all samples, set max_samples=5001 when initializing the masker.
+Best threshold: 0.55, Best F1: 0.03389830508474576
+
+Supervised Ensemble Model Results:
+Confusion Matrix:
+ [[943  46]
+ [ 11   1]]
+
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.99      0.95      0.97       989
+           1       0.02      0.08      0.03        12
+
+    accuracy                           0.94      1001
+   macro avg       0.50      0.52      0.50      1001
+weighted avg       0.98      0.94      0.96      1001
+
+
+ROC AUC Score: 0.5645433097404786
+
+Number of potentially missed frauds detected: 395
+
+=== EXTRA DIAGNOSTICS ===
+Test split: n=1001, frauds=12, prevalence=0.0120
+PR-AUC (average precision) on test split: 0.0169  (no-skill baseline = 0.0120)
+
+Hybrid-flagged transactions (all rows, incl. true frauds): 412
+  Isolation Forest anomaly (probability < 0.8): 399
+  Isolation Forest anomaly + probability >= 0.8: 1
+  Probability >= 0.8 only (not an anomaly): 12
+  Isolation Forest flags overall: 400 of 5001 rows (8.0%)
+
+Isolation Forest ROC-AUC vs Is_Fraudulent (more anomalous = more fraud-like): 0.5045
+Hybrid flag vs Is_Fraudulent on ALL rows (supervised part is in-sample here):
+[[4551  395]
+ [  38   17]]
+Frauds flagged: 17 of 55 (vs 8.2% of all rows flagged)
+
+real	0m5.977s
+user	0m6.953s
+sys	0m0.246s

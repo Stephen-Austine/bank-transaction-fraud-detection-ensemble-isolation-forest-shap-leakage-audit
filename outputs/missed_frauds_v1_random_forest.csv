@@ -1,0 +1,1 @@
+Customer_ID,First_Name,Last_Name,Gender,Age,State,Account_Type,Account_Balance,Credit_Score,Email_Opt_In,Has_Loan,Join_Date,Loan_Amount,Business_Type,Transaction_Type,Pay_On_Time,Recent_Transaction_Amount,Transaction_Time,Transaction_Location,Avg_Monthly_Transaction,Device_Type,Account_Age_Years,Risk_Score,Is_Fraudulent,Hour,Time_Of_Day,Weekday,High_Value_Flag,Model_Prediction
